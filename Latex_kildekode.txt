@@ -1,0 +1,56 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{hyperref}
+\usepackage[backend=biber,style=ieee, sorting=none]{biblatex}
+\addbibresource{references.bib}
+
+\title{Elk 330: Early stage assesment}
+\author{Johan Hobberstad Sandsbråten}
+\date{October 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{Integrasjon av solceller og batteri i distrubasjonsnettet}
+\subsection{Problemstilling og mål}
+\textit{"Hvordan påvirker integrering av solceller spenningsnivået i distribusjonsnettet, og hvordan kan batteri brukes til å stabilisere spenningen ved høy eller lav solcelleproduksjon."}\\\\
+Rapporten skal undersøke hvordan distribusjonsnettets spenning blir påvirket av integrasjon av solceller alene uten batteripakke. Hvordan vil nettet prestere når solcellene har høy produksjon, og forbruket er lavt? I tillegg skal rapporten undersøker hvordan batteripakker kan fungere som spenning stabilisering i perioder hvor spenningen er for lav eller for høy.\\
+Problem stillingen er svært relevant i dag pågrunn av ønsket om dekarbonisering, desentralisering og digitalisering. På grunn av ønsket om redusere utslipp, blir det innstallert flere solceller. Disse solcellene blir ofte installert desentralisert på hus og næringsbygg. Som nevnt ovenfor kan dette føre til overspenning på lavspent nettet. En løsning på problemet kan være å bruke batterier til å lagre eller gi effekt ut på nettet. For at dette skal bli optimalisert, må distrubusjonsnettet digitaliseres, slik at hele nettet kan snakke ilag.\\
+Igjennom prosjektet ønsker jeg å se hvordan et distrubusjonsnett blir påvirket av høy solcelleproduksjon, og finne en løsning på hvordan man kan kontrollere spenningsnivået ved høy produksjon. 
+
+\subsection{Faglig grunnlag}
+\begin{itemize}
+    \item Min aktuelle bakgrunn er Elektriske anlegg og systemer 1 og Smarte nett med distribuert produksjon og landeinfrastruktur
+    \item fagboken\cite{glover2022}, ønsker jeg å bruke som en kilde til generell informasjon for elektriske systemer.
+    \item Som faglig rapport, ønsker jeg å bruke \cite{7050150}. Dette er en faglig rapport, som ser på problemer med for mye solcelle produksjon.
+    \item \cite{nve} er en faglig artikkel som beskriver problemet av for høy solcelle produksjon her i Norge.
+    \item Jeg planlegger å gjennomføre litteratur søket ved bruk av datakilder som Ieee. Om jeg bruker google, vil jeg bare bruke kilder som jeg vet er til å stole på slik som nve. Jeg kommer til å bruke søkeord som "pv", "solceller", "batterilagring", "overskuddsproduksjon" og "overspenning" til å gjennomføre litteratursøket.  
+\end{itemize}
+
+\subsection{Foreløpig plan}
+Planen for prosjektet er å starte med simuleringer for et nett som skal representere et høyspentnett som forsyner ett lavspentnett. På lavspentnettet skal husene ha solceller, som kan forsyne seg selv, men også nettet ved overproduksjon. Ved denne simuleringen ønsker jeg å finne ut hvordan nettet reagerer ved høy overproduksjon. Hvordan vil spenningen på lavspentnettet oppføre seg? Hvordan vil effektflyten ifra lavspent til høyspent være?. Deretter ønsker jeg å legge til batterier som lades opp ved overproduksjon, og se om dette kan løse problemet med overspenning.\\
+Jeg forventer å legge inn mange timer på prosjektet med tanke på at dette er 2/5 av karakteren i faget. I tillegg er det en svært relevant oppgave, som gjør det spennende å jobbe med.
+
+
+
+
+
+\subsection{Ambisjon og gjennomførbarhet}
+Modellen skal være omfattende og detaljert nok til å kunne sammenligne resultater fra simuleringer til et realistisk lavspentnett. Pågrunn av tiden, vil noen antagelser og forenklinger bli tatt ibruk. 
+Antakelser som jeg tenker kan være nødvendige er å anta at det eksterne nettet er et stivt nett. Jeg kommer også til gjøre batteriet veldig enkelt, hvor batteriet bare har en max kapasitet, en max lade og utladnings effekt. Lastene vil også bare være fastsatte verdier uten variasjon. \\ \\
+Det mest omfattende delen av prosjektet er nok å sette parameterverdiene, slik at resultatene blir mest mulig lik virkeligheten. Batteriet vil også være ganske omfattende, ettersom batteriet skal kunne styre når det skal lade, og når det skal sende effekt ut på nettet. 
+
+\subsection{Ønsket innleveringsform}
+Jeg ønsker å levere pdf kodet i latex. 
+
+\subsection{Git-repositorium}
+Inni repositoriumet finner man latex kildekode og BibTex
+\\
+\\
+lenke:https://github.com/johsan123/Elk330-rapport.git
+
+
+
+\printbibliography[title={references}]
+\end{document}
